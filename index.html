@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شاليه بيرلا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/logo.png" alt="شعار شاليه بيرلا" class="header-logo">
+  </header>
+
+  <main class="page-content">
+    <section class="booking-card" aria-labelledby="page-title">
+      <img src="assets/cover.jpg" alt="صورة شاليه بيرلا" class="cover-image">
+      <div class="intro">
+        <h1 id="page-title">شاليه بيرلا</h1>
+        <p>عقد إيجار يومي لشاليه بيرلا</p>
+      </div>
+
+      <form id="booking-form" novalidate>
+        <div class="field">
+          <label for="name">الاسم <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="national-id">رقم الهوية الوطنية <span aria-hidden="true">*</span></label>
+          <input id="national-id" name="national-id" type="text" inputmode="numeric" required>
+        </div>
+        <div class="field">
+          <label for="phone">رقم الجوال <span aria-hidden="true">*</span></label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="rental-value">قيمة الإيجار المتفق عليه <span aria-hidden="true">*</span></label>
+          <input id="rental-value" name="rental-value" type="text" inputmode="decimal" required>
+        </div>
+        <div class="field">
+          <label for="booking-date">تاريخ الحجز <span aria-hidden="true">*</span></label>
+          <input id="booking-date" name="booking-date" type="date" required>
+        </div>
+
+        <section class="terms" aria-labelledby="terms-title">
+          <h2 id="terms-title">شروط العقد</h2>
+          <ul>
+            <li>يعتمد في الحجوزات التاريخ الميلادي.</li>
+            <li>يجب على المستأجر الإلتزام بضوابط حق الجار وعدم إزعاجهم برفع صوت السماعة.</li>
+            <li>المستأجر مسؤول عن المسبح ويعتبر تحت مسؤوليته ويتعهد بالمحافظة عليه ومراقبة من يسبح من الأطفال.</li>
+            <li>المستأجر مسؤول عن التشجير الطبيعي داخل الشاليه وعدم قطع أو قطف الورد.</li>
+            <li>المستأجر مسؤول مسؤولية كاملة أمام الجهات الحكومية عند حصول أي مخالفة شرعية أو قانونية داخل الشاليه.</li>
+            <li>لا يحق للمستأجر أن يأجر الشاليه للغير إطلاقًا.</li>
+            <li>لا يتم تسليم الشاليه للمستأجر ولا لضيوفه إلا بعد دفع كامل مبلغ الإجار مع التأمين وقيمته 300 ريال.</li>
+            <li>يكون الدخول عند الساعة الثانية مساءً، والخروج عند الساعة الرابعة فجرًا.</li>
+            <li>تعاد قيمة التأمين للمستأجر عند تسليم الشاليه كما استلمه.</li>
+            <li>يحق لإدارة الشاليه تقييم الضرر المادي في حالة التلف ويلتزم المستأجر بدفع المبلغ أو خصمه من مبلغ التأمين.</li>
+            <li>إدارة الشاليه غير مسؤولة عن أي أغراض يفقدها المستأجر داخل الشاليه.</li>
+            <li>في حال عدم الحضور لا يحق للمستأجر المطالبة بالمبلغ المدفوع.</li>
+            <li>يختلف الإجار خلال أيام العطل والإجازات الرسمية عن الأيام العادية.</li>
+            <li>الحد الأقصى للتجمعات داخل الشاليه في المناسبات الإجتماعية لا يزيد عن عشرين شخص.</li>
+            <li>العربون غير مسترد.</li>
+          </ul>
+        </section>
+
+        <label class="agreement" for="agreement">
+          <input id="agreement" name="agreement" type="checkbox" required>
+          <span>موافق على شروط العقد</span>
+        </label>
+        <p id="form-error" class="form-error" role="alert" aria-live="polite"></p>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

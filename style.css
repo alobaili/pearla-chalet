@@ -1,0 +1,60 @@
+:root {
+  --ink: #202020;
+  --muted: #5f5f5f;
+  --line: #e7e7e7;
+  --accent: #62bdd0;
+  --danger: #ee5050;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+}
+
+.header-logo { width: 66px; height: 66px; object-fit: contain; }
+.page-content { width: min(100%, 640px); margin: 0 auto; padding: 33px 25px 52px; }
+.cover-image { display: block; width: 100%; aspect-ratio: 4 / 1; object-fit: cover; border-radius: 6px; }
+.intro { text-align: center; padding: 17px 0 21px; }
+h1 { margin: 0; font-size: 25px; font-weight: 700; }
+.intro p { margin: 13px 0 0; font-size: 14px; font-weight: 600; }
+
+.field { margin-top: 24px; }
+.field label { display: block; margin-bottom: 8px; font-size: 15px; font-weight: 700; }
+.field label span { color: var(--danger); font-size: 20px; line-height: 0; vertical-align: middle; }
+input[type="text"], input[type="tel"], input[type="date"] {
+  width: 100%; height: 44px; padding: 8px 11px; color: var(--ink); background: #fff;
+  border: 1px solid var(--line); border-radius: 5px; font: inherit; outline: none;
+}
+input:focus { border-color: #9ed8e4; box-shadow: 0 0 0 3px rgb(98 189 208 / 14%); }
+input.invalid { border-color: var(--danger); }
+
+.terms { padding-top: 29px; }
+.terms h2 { margin: 0 0 16px; font-size: 16px; }
+.terms ul { margin: 0; padding: 0; list-style: none; text-align: right; }
+.terms li { margin-bottom: 15px; font-size: 14px; line-height: 1.85; font-weight: 600; }
+.terms li::before { content: "- "; }
+
+.agreement { display: flex; align-items: center; justify-content: flex-start; gap: 7px; margin-top: 19px; font-size: 15px; font-weight: 600; cursor: pointer; }
+.agreement input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent); }
+.form-error { min-height: 18px; margin: 9px 0 0; color: var(--danger); font-size: 13px; }
+button { display: block; min-width: 90px; margin: 13px auto 0; padding: 11px 24px; color: #fff; background: var(--accent); border: 0; border-radius: 5px; font: inherit; font-size: 16px; font-weight: 700; cursor: pointer; }
+button:focus-visible { outline: 3px solid rgb(98 189 208 / 35%); outline-offset: 2px; }
+
+@media (min-width: 600px) {
+  .page-content { padding-top: 42px; }
+  .cover-image { border-radius: 8px; }
+}
